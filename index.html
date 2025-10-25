@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI 智能设计助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        background-color: #0f172a; /* bg-slate-900 */
+        color: #d1d5db; /* text-gray-300 */
+        font-family: sans-serif;
+      }
+      /* Typewriter animation */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+      }
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #a78bfa; } /* violet-400 */
+      }
+      .animate-typewriter {
+        overflow: hidden;
+        border-right: .15em solid #a78bfa;
+        white-space: nowrap;
+        margin: 0 auto;
+        letter-spacing: .05em;
+        /* Dynamic animation duration based on --chars variable */
+        animation: 
+          typing calc(var(--chars, 20) * 0.1s) steps(var(--chars, 20), end),
+          blink-caret .75s step-end infinite;
+      }
+      /* Fade-in animation for calculation history */
+      @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.5s ease-out forwards;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.27.0"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

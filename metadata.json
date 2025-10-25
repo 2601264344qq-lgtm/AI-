@@ -1,0 +1,5 @@
+{
+  "name": "Copy of AI 智能设计助手",
+  "description": "一个集成了 Gemini 2.5 Flash 的智能设计助手，提供 AI 分析、工程计算和数据可视化等功能，帮助工程师提高设计效率。",
+  "requestFramePermissions": []
+}
